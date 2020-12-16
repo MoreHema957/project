@@ -1,0 +1,25 @@
+
+<button class="btn btn-success" routerLink="/dashboard">Home</button>
+<div class="row">
+  <div class="col-2"></div>
+  <div class="col-8">
+    <form #userForm="ngForm" (ngSubmit)="onSubmit(userForm)">
+      <div class="form-group"><label for="courses"> Course
+        <input required minlength="5" ngModel name="course"
+               type="text" id="courses" class="form-control" #courses="ngModel"></label></div>
+      <div class="alert alert-danger" *ngIf="courses.touched && !courses.valid">
+        Enter the course name
+      </div>
+      <div class="alert alert-danger" *ngIf="">
+        Enter minimum 5 charecters
+      </div>
+      <div class="form-group"><label for="Comment">Comment
+        <textarea
+          required ngModel name="comment" #comment="ngModel"
+           id="Comment" cols="20" rows="5" class="form-control"></textarea></label></div>
+      <button class="btn-primary btn-lg">Submit</button>
+      <p>{{ userForm.value | json}}</p>
+      <br>
+    </form>
+  </div>
+</div>

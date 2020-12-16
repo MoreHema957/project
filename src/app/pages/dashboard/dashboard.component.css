@@ -1,0 +1,35 @@
+.custom-card {
+  height: 100px;
+  border-radius: 6%;
+  cursor: pointer;
+}
+
+.custom-badge {
+  height: 30px;
+  width: 50px;
+  background-color: #ebebe0 !important;
+  position: absolute;
+  top: 35px;
+}
+
+.bg-navy {
+  background-color: #000080 !important;
+}
+
+.bg-blue {
+  background-color: #006bb3 !important;
+}
+
+.bg-pink {
+  background-color: #a3297a !important;
+}
+
+.bg-pinkish {
+  background-color: #ac39ac !important;
+}
+
+.custom-fa {
+  color: #fff;
+  text-shadow: 1px 1px 1px #ccc;
+  font-size: 1.5em;
+}

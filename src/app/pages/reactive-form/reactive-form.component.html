@@ -1,0 +1,18 @@
+
+<button class="btn btn-success" routerLink="/dashboard">Home</button>
+<br>
+<form [formGroup]="form">
+<div class="form-group">
+  <label for="topicId"> Add Courses : </label>
+  <input type="text" id="topicId" class="form-control" (keyup.enter)="addTopic(topic)" #topic>
+  <div class="alert alert-danger" *ngIf="topicNames.touched && topicNames.invalid">
+    Please enter the courses.
+  </div>
+</div>
+  <ul class="list-group">
+    <li class="list-group-item"
+        *ngFor="let topic of topicNames.controls"
+        (click)="removeTopic(topic.value)">
+      <span class="text-primary">{{ topic.value}}</span></li>
+  </ul>
+</form>
